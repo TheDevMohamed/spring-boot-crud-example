@@ -59,6 +59,13 @@ Open a web browser and navigate to [http://localhost:8080](http://localhost:8080
 - `GET /api/authors`: Retrieve all authors.
 - `POST /authors`: Create a new author.
 
+## Testing
+
+The project includes both unit tests and integration tests:
+
+- **Unit Tests:** Unit tests are available for controller and service classes to test individual components in isolation.
+- **Integration Tests:** Integration tests are available for API endpoints to test the entire application stack.
+
 ## Contributing
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
