@@ -16,9 +16,9 @@ This project showcases a basic implementation of CRUD operations for managing a 
 
 The project structure is organized as follows:
 
-- **src/main/java/com/example/demo:** Contains the main Java source files.
+- **src/main/java/com/alkhenaizi/springCrud:** Contains the main Java source files.
   - **controller:** RESTful controller classes defining API endpoints.
-  - **model:** Entity classes representing domain objects.
+  - **domain:** Entity classes representing domain objects.
   - **repository:** Spring Data JPA repository interfaces.
   - **service:** Service classes providing business logic.
 - **src/main/resources:** Contains application properties and database schema initialization script.
@@ -38,29 +38,27 @@ cd spring-boot-crud-example
 3. **Build the project:**
 mvn clean install
 
-4. **Run the application:**
+4. **Run the PostgreSQL database using Docker:**
+docker-compose up -d
+
+5. **Run the application:**
 java -jar target/spring-boot-crud-example-0.0.1-SNAPSHOT.jar
 
-
-5. **Access the application:**
-Open a web browser and navigate to [http://localhost:8080](http://localhost:8080) to access the Swagger UI, which provides a user-friendly interface to interact with the API endpoints.
+6. **Access the application:**
+Open a web browser and navigate to [http://localhost:8080](http://localhost:8080).
 
 ## API Endpoints
 
-The following API endpoints are available:
+### Books
 
-- `GET /api/products`: Retrieve all products.
-- `GET /api/products/{id}`: Retrieve a product by ID.
-- `POST /api/products`: Create a new product.
-- `PUT /api/products/{id}`: Update an existing product.
-- `DELETE /api/products/{id}`: Delete a product by ID.
+- `GET /books/{isbn}`: Retrieve a book by ISBN.
+- `PUT /books/{isbn}`: Upsert a book.
 
-For detailed documentation and usage examples, refer to the Swagger UI available at [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html) after running the application locally.
+### Authors
+
+- `GET /api/authors`: Retrieve all authors.
+- `POST /authors`: Create a new author.
 
 ## Contributing
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
